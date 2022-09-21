@@ -1,3 +1,4 @@
-import Main from "./Main/main";
+import Main from "./Main/Main";
+import Course from "./Course/Course";
 
-export { Main };
+export { Main, Course };

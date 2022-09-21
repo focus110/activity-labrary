@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "theme-25": "#9D9D9D",
         "theme-50": "#23268C",
+        "theme-100": "#EFEFEF",
       },
     },
     container: {
