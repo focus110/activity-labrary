@@ -16,6 +16,10 @@ code {
 @tailwind components;
 @tailwind utilities;
 
+.wraper {
+  @apply container py-16 sm:w-[60%];
+}
+
 @layer base {
   html {
     font-family: Poppins, roboto, sans-serif;

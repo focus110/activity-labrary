@@ -4,7 +4,7 @@ import Title from "../../component/Title";
 const Activity = () => {
   return (
     <div className="container flex justify-center py-16">
-      <div className="text-center text-theme-25 font-light text-xs sm:text-sm">
+      <div className="sm:w-2/4 text-center text-theme-25 font-light text-xs sm:text-sm">
         <Title title="Assignment" />
         <p>
           Course Code: <span>Com 111</span>

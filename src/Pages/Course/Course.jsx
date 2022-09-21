@@ -9,7 +9,7 @@ const Course = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    goto("/activity");
+    goto("/activities");
   };
   return (
     <div className="flex justify-between container py-16">
