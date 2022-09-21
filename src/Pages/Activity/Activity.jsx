@@ -14,7 +14,7 @@ const Activity = () => {
         </p>
 
         <div className="flex items-center space-x-4 sm:space-x-8">
-          <div className="flex items-center space-x-2 py-4">
+          <div className="flex items-center space-x-2 py-4 text-left sm:text-center">
             <svg
               fill="none"
               viewBox="0 0 24 24"
@@ -32,7 +32,7 @@ const Activity = () => {
               Due Date: <span>1 october</span>
             </p>
           </div>
-          <div className="flex items-center space-x-2 py-4">
+          <div className="flex items-center space-x-2 py-4 text-left sm:text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -48,11 +48,17 @@ const Activity = () => {
               />
             </svg>
 
-            <p>
-              Due Date: <span>1 october</span>
-            </p>
+            <p>Esther Washinton</p>
           </div>
         </div>
+
+        <p className="py-8 text-left">
+          Q. 1 A. Explain major component of digital computer with suitable
+          block diagram. B. Write the Difference between hardware, software and
+          firmware Q. 2 A. Explain architecture of Intel 8085 microprocessor. B.
+          Explain various addressing mode. Q. 3 A. Explain primary, secondary
+          and cache memory.
+        </p>
 
         <button className="flex items-center space-x-2 bg-theme-50 text-white rounded-lg py-2 px-4 sm:py-4 sm:px-8">
           <svg
