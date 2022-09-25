@@ -6,8 +6,12 @@ import Activities from "./Pages/Activities/Activities";
 import Activity from "./Pages/Activity/Activity";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 
+// import { Provider } from "react-redux";
+// import store from "./store";
+
 function App() {
   return (
+    // <Provider store={store}>
     <BrowserRouter>
       <Nav />
       <Routes>
@@ -18,6 +22,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
+    // </Provider>
   );
 }
 

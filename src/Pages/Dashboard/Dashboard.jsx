@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Title from "../../component/Title";
+import { department } from "../../constants/constants";
 
 const Dashboard = () => {
   const [data, setData] = useState({
@@ -9,9 +10,12 @@ const Dashboard = () => {
     course_title: "",
     due_date: "",
     activity: "",
+    dept: "",
+    semester: "",
+    year: "Nd 1",
   });
 
-  const { msg, course_code, course_title, due_date, activity } = data;
+  const { msg, course_code, course_title, due_date, activity, dept } = data;
 
   const onChange = (e) => setData({ ...data, [e.target.name]: e.target.value });
 
@@ -22,11 +26,20 @@ const Dashboard = () => {
       course_code === "" ||
       course_title === "" ||
       due_date === "" ||
-      activity === ""
+      activity === "" ||
+      dept === ""
     ) {
       window.alert("Compelete all fields!");
     }
   };
+
+  const allDept = department.map((item) => {
+    return (
+      <option key={item.id} value={item.dept}>
+        {item.dept}
+      </option>
+    );
+  });
 
   return (
     <div className="wraper text-center">
@@ -48,15 +61,19 @@ const Dashboard = () => {
             />
           </div>
           <div className="w-full space-y-2 mt-4 sm:mt-0">
-            <label htmlFor="course_title">Course Title*</label>
-            <input
-              value={course_title}
+            <label htmlFor="course_title">Department*</label>
+
+            <select
+              value={dept}
               onChange={onChange}
-              name="course_title"
+              name="activity"
               className="w-full text-sm border border-theme-100 focus:outline-none p-4 rounded-lg"
-              type="text"
-              placeholder="Enter course title"
-            />
+            >
+              <option defaultValue value="">
+                Choose department
+              </option>
+              {allDept}
+            </select>
           </div>
         </div>
 
@@ -95,7 +112,7 @@ const Dashboard = () => {
             name="msg"
             className="w-full h-64 text-sm border border-theme-100 focus:outline-none p-4 rounded-lg"
             type="text"
-            placeholder="Enter assignment"
+            placeholder="First paragraph..."
           />
         </div>
         <button className="bg-theme-50 text-white rounded-lg py-4 px-8">
